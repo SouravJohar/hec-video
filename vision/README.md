@@ -1,4 +1,4 @@
-detectorPiv2.py
+**detectorPiv2.py**
 
 Optimized for Python 2.7
 
