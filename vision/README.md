@@ -3,24 +3,19 @@
 <h3>Optimized for Python 2.7</h3>
 
 <h4>Dependencies:</h4>
-*numpy
-*scipy
-*scikit-learn
-*TensorFlow
-*argparse
-*cPickle
-*OpenCV
-*PIL
-
-* Item
-* Item
-- Item
-- Item
+* numpy
+* scipy
+* scikit-learn
+* TensorFlow
+* argparse
+* cPickle
+* OpenCV
+* PIL
 
 **Usage:**
-	-`python detectorPiv2.py test_img.jpg svm-classify-64-gray.model`
-	-`python detectorPiv2.py test_video.mp4 svm-classify-64-gray.model`
-	-`python detectorPiv2.py directory_of_imgs/ svm-classify-64-gray.model`
+	- `python detectorPiv2.py test_img.jpg svm-classify-64-gray.model`
+	- `python detectorPiv2.py test_video.mp4 svm-classify-64-gray.model`
+	- `python detectorPiv2.py directory_of_imgs/ svm-classify-64-gray.model`
 	
 The second positional argument is the name of the ML model used for the first stage of detection. All models must be stored in the models/ directory.
 
