@@ -1,6 +1,6 @@
 <h1>detectorPiv2.py</h1>
 
-<h3>Optimized for Python 2.7</h3>
+<h3>Optimized for Python 2.7 on Raspberry Pi 3</h3>
 
 <h4>Dependencies:</h4>
 
@@ -12,6 +12,8 @@
 * cPickle
 * OpenCV
 * PIL
+* picamera
+* RPi.GPIO
 
 **Usage:**
 * `python detectorPiv2.py test_img.jpg svm-classify-64-gray.model`
@@ -24,7 +26,10 @@ The second positional argument is the name of the ML model used for the first st
 * `--cnn`    Use the CNN directly, skipping the first stage of detection (ML model).
 * `--irr`    Only use the ML model, skip the CNN.
 
+**Results:**
+These are a few results after running this on a Raspberry Pi.
 
+Logo: ![Alt](/test_images/frame00001.jpg "Title")
 
 The processing time was about 2 seconds per frame, if an elephant was present.
 For a frame with no irregularities, the processing time was less than 0.5 seconds.
@@ -33,4 +38,4 @@ For a frame with no irregularities, the processing time was less than 0.5 second
 **Note:**
 	A 5V 2Amp power supply is required for running.
 	The threshold for an elephant detection is set to 10% confidence.
-	All processed images are stored in the out/ directory.
+	All processed images are stored in the `out/` directory.
