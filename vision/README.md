@@ -29,7 +29,7 @@ The second positional argument is the name of the ML model used for the first st
 **Results:**
 These are a few results after running this on a Raspberry Pi.
 
-Logo: ![Alt](/test_images/frame00001.jpg "Title")
+Logo: ![Alt](/test_imgs/frame00001.jpg "Title")
 
 The processing time was about 2 seconds per frame, if an elephant was present.
 For a frame with no irregularities, the processing time was less than 0.5 seconds.
