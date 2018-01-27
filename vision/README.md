@@ -2,15 +2,15 @@
 
 <h3>Optimized for Python 2.7</h3>
 
-Dependencies:
-numpy
-scipy
-scikit-learn
-TensorFlow
-argparse
-cPickle
-OpenCV
-PIL
+<h5>Dependencies:</h5>
+	`numpy`
+	`scipy`
+	`scikit-learn`
+	`TensorFlow`
+	`argparse`
+	`cPickle`
+	`OpenCV`
+	`PIL`
 
 Usage:
 	python detectorPiv2.py test_img.jpg svm-classify-64-gray.model
