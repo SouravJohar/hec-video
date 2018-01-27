@@ -3,6 +3,11 @@
 <h3>Optimized for Python 2.7</h3>
 
 <h4>Dependencies:</h4>
+
+* Item
+- Item
+- Item
+
 * numpy
 * scipy
 * scikit-learn
