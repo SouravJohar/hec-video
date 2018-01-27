@@ -37,6 +37,6 @@ For a frame with no irregularities, the processing time was less than 0.5 second
 
 
 **Note:**
-	A 5V 2Amp power supply is required for running.
-	The threshold for an elephant detection is set to 10% confidence.
-	All processed images are stored in the `out/` directory.
+* A 5V 2Amp power supply is required for running.
+* The threshold for an elephant detection is set to 10% confidence.
+* All processed images are stored in the `out/` directory.
