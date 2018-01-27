@@ -12,6 +12,11 @@
 *OpenCV
 *PIL
 
+* Item
+* Item
+- Item
+- Item
+
 **Usage:**
 	-`python detectorPiv2.py test_img.jpg svm-classify-64-gray.model`
 	-`python detectorPiv2.py test_video.mp4 svm-classify-64-gray.model`
