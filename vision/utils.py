@@ -6,13 +6,29 @@ import tensorflow as tf
 from PIL import Image
 import cPickle as p
 import numpy as np
+import requests
 import cv2
 import os
 
 dim = None
 imgtype = None
+KEY = 'qp9ezhmfH0yRtBmvkJhIPw'
+
+def sms_alert(person, time_spotted):
+    URL = 'https://www.smsgatewayhub.com/api/mt/SendSMS?APIKey={}&senderid=TESTIN&channel=2&DCS=0&flashsms=0&number=91{}&text={}&route=13'.format(KEY, person, "Elephant Alert. Elephant(s) spotted at " + time_spotted)
+    requests.get(URL)
 
 
+def image_alert(file_path, time_spotted):
+    TOKEN = "351661597:AAF5k-oU0kevDJ-JDcw1D4DXbjMUHwOPl9o"
+    to = 374321820
+    query = "curl -s -X POST 'https://api.telegram.org/bot{0}/sendPhoto' -F chat_id={1} -F photo='@{2}'".format(TOKEN, to, file_path)
+    os.system(query)
+    message = "Elephant Alert. Elephant(s) spotted at " + time_spotted
+    send_url = "https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}".format(TOKEN, to, message)
+    requests.get(send_url)
+
+    
 def if_elephant(scores, classes):
     objects = []
     for (score, cla) in zip(scores, classes):
@@ -94,7 +110,7 @@ def perform_detection(img_np, sess, packed, category_index):
         feed_dict={packed[0]: image_np_expanded})
     result = if_elephant(scores[0][:5], classes[0][:5])
     if result:
-        print np.squeeze(boxes), np.squeeze(scores), np.squeeze(classes), num
-        vu.visualize_boxes_and_labels_on_image_array(img_np, np.squeeze(boxes), np.squeeze(classes).astype(
-            np.int32), np.squeeze(scores), category_index, use_normalized_coordinates=True, line_thickness=4)
+        a = 1
+        vu.visualize_boxes_and_labels_on_image_array(img_np, np.squeeze(boxes), np.squeeze(classes).astype(np.int32), np.squeeze(scores), category_index, use_normalized_coordinates=True, line_thickness=4)
+
     return int(result)
